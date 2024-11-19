@@ -1,101 +1,88 @@
-import Image from "next/image";
+import AnimatedLaptop from "@/components/AnimatedLaptop";
+import AnimatedServices from "@/components/AnimatedServices";
+import HeroDesc from "@/components/HeroDesc";
+import HeroPubOne from "@/components/HeroPubOne";
+import HoverImage from "@/components/HoverImage";
+import MaxWidthWrapper from "@/components/MaxWithWrapper";
+import MouseFollower from "@/components/MouseFollower";
+import Naming from "@/components/Naming";
+import Navbar from "@/components/Navbar";
+import Prism from "@/components/Prism";
+import TechDescription from "@/components/TechDescription";
+import TechnologiesDescription from "@/components/TechnologiesDescription";
+import TopDownPrism from "@/components/TopDownPrism";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="h-full w-full bg-black relative">
+      <MouseFollower />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* first page */}
+      <section
+        className={`h-full w-full bg-white sm:rounded-b-[5vw] rounded-b-[8vw]  relative z-`}
+      >
+        <section className="sm:px-4 px-2">
+          <Navbar />
+        </section>
+        <section className="px-4 h-full w-full relative overflow-hidden ">
+          <MaxWidthWrapper>
+            <div className="h-full w-full sm:flex justify-between ">
+              <HeroPubOne />
+              <Prism />
+              <HeroDesc />
+            </div>
+          </MaxWidthWrapper>
+        </section>
+        <section className="h-full w-full relative pb-10 bg-transparent ">
+          <Naming />
+        </section>
+      </section>
+
+      {/* second page */}
+      <section className="h-full w-full overflow-hidden">
+        {/* Animated  Self Branding Page  */}
+        <section className="w-full h-full relative prism-trigger mb-[20vh] ">
+          <MaxWidthWrapper>
+            <div
+              className="text-[7vw] sm:text-[5vw]  leading-none py-36 text-white uppercase font-helveticaNowDisplayMedium  sm:mb-[20vh] overflow-hidden"
+              data-scroll
+              data-scroll-speed="-0.2"
+            >
+              <p>discover the</p>
+              <p>power of</p>
+              <p>Creative Developer</p>
+            </div>
+            <AnimatedLaptop />
+            <TopDownPrism />
+          </MaxWidthWrapper>
+        </section>
+        <AnimatedServices />
+      </section>
+
+      <section className="h-full w-full ">
+        <TechnologiesDescription />
+      </section>
+      <section className="h-full w-full">
+        <div className="text-[5vw] pl-2 font-helveticaNowDisplayBold uppercase text-white">
+          Wants to connect with us
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="pl-2">
+          <div className="flex justify-center items-center rounded-full w-fit border border-white px-[2vw] py-[1vw] ">
+            <a
+              href="mailto:karansharma40692@email.com"
+              className="w-full overflow-hidden inline-block text-white text-[2vw] font-helveticaNowDisplayBold leading-none uppercase"
+            >
+              Reach out
+            </a>
+          </div>
+        </div>
+        <HoverImage />
+      </section>
+      <section>
+        <p className=" text-[11vw]  font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-950  to-neutral-800 inset-x-0 select-none uppercase font-helveticaNowDisplayExtraBold">
+          karann sharma
+        </p>
+      </section>
+    </main>
   );
 }
