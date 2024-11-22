@@ -25,7 +25,7 @@ export default function MouseFollower() {
   }, []);
   return (
     <div
-      className=" fixed top-0 opacity-0 left-0 w-6 h-6 rounded-full bg-red-600  z-[90] hidden sm:block  "
+      className=" fixed top-0 opacity-0 left-0 w-6 h-6 rounded-full bg-red-600  z-[90] hidden sm:block pointer-events-none "
       ref={MouseFollowerRef}
     />
   );

@@ -19,9 +19,8 @@ function TechnologiesDescription() {
       scrollTrigger: {
         trigger: scrollTriggerHolder.current,
         scroller: "body",
-        start: "top 40%",
-        end: "bottom bottom",
-        markers: true,
+        start: "top 60%",
+        end: "bottom 80%",
         scrub: 2,
       },
     });
@@ -29,7 +28,7 @@ function TechnologiesDescription() {
 
   return (
     <section className="h-full w-full" ref={scrollTriggerHolder}>
-      <h3 className="text-[6vw] text-center font-helveticaNowDisplayBold text-white uppercase">
+      <h3 className="text-[9vw] sm:text-[6vw] text-center font-helveticaNowDisplayBold text-white uppercase">
         The technologies we work with
       </h3>
 
@@ -81,7 +80,6 @@ function TechnologiesDescription() {
           techs={["redis", "reactNative", "aws", "web3", "web neural network"]}
         />
       </div>
-      
     </section>
   );
 }
