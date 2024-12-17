@@ -22,6 +22,7 @@ function TechnologiesDescription() {
         start: "top 60%",
         end: "bottom 80%",
         scrub: 2,
+        markers:true
       },
     });
   });

@@ -11,6 +11,8 @@ import TechnologiesDescription from "@/components/TechnologiesDescription";
 import TopDownPrism from "@/components/TopDownPrism";
 import { cn } from "@/lib/utils";
 
+
+
 export default function Home() {
   const services = [
     {
@@ -123,6 +125,7 @@ export default function Home() {
         <p className=" text-[11vw]  font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-950  to-neutral-800 inset-x-0 select-none uppercase font-helveticaNowDisplayExtraBold">
           karann sharma
         </p>
+        
       </section>
     </main>
   );

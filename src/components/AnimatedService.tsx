@@ -87,15 +87,15 @@ export default function AnimatedDescription({
         className="h-full w-full flex items-end justify-between px-[2vw] sm:px-[1.5vw] text-black"
         onClick={handleToggle}
       >
-        <p className="h-full text-[7vw] sm:text-[6vw] font-helveticaNowDisplayBold">
-          {serialNumber}
+        <p className="h-full text-[12vw] sm:text-[6vw] font-helveticaNowDisplayBold">
+          {serialNumber}.
         </p>
         <div className="flex flex-col items-end pt-4">
           <ArrowDown
             className="sm:h-[7vw] sm:w-[7vw] h-10 w-10 md:h-[5vw] md:w-[5vw] lg:h-[4vw] lg:w-[4vw] p-1 sm:p-3 rounded-full  border border-black text-black "
             ref={arrowRef}
           />
-          <p className="uppercase text-[5vw] sm:text-[4vw] font-helveticaNowDisplayBold">
+          <p className="uppercase text-[6vw] sm:text-[4vw] font-helveticaNowDisplayBold">
             {title}
           </p>
         </div>
